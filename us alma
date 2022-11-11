@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Scratch{
+    public static void main(String[] args){
+        Scanner yakut=new Scanner(System.in);
+        System.out.print("üssü alınacak sayıyı giriniz: ");
+        int sayi=yakut.nextInt();
+        System.out.print("üssü olacak sayiyi giriniz: ");
+        int ussu=yakut.nextInt();
+        int total=1;
+        //3^4=3*3*3*3
+        for(int i=1;i<=ussu;i++){
+            total=total*sayi;
+        }
+        System.out.print("cevabınız: "+total);
+    }
+}
