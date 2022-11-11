@@ -1,0 +1,15 @@
+//Ödev:Java döngüler ile girilen sayıya kadar olan 4 ve 5'in
+//kuvvetlerini ekrana yazdıran programı yazıyoruz.
+import java.util.Scanner;
+class Scratch{
+    public static void main(String[] args){
+        int sayi;
+        Scanner inp=new Scanner(System.in);
+        System.out.print("sınır sayisini giriniz: ");
+        sayi=inp.nextInt();
+
+        for (int i=1;i<=sayi;i*=20){
+            System.out.println(i);
+        }
+    }
+}
