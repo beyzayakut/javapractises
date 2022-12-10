@@ -1,0 +1,62 @@
+import java.util.Scanner;
+public class ebob {
+    public static void main(String[] args){
+        Scanner sc=new Scanner (System.in);
+        int a, b, i, bolen, ebob=0, ekok=1;
+        
+        System.out.println("Ebobunun hesaplanmasını istediğininiz sayıları girin: ");
+        a=sc.nextInt();
+        b=sc.nextInt();
+
+        /*
+        bolen=1;
+        while(bolen<=a){
+            if(a%bolen==0 && b%bolen==0)
+                ebob = bolen;
+
+            bolen++;
+        }
+
+         */
+        bolen=a;
+        while(bolen>=1){
+            if(a%bolen==0 && b%bolen==0) {
+                ebob = bolen;
+                break;
+            }
+            bolen--;
+        }
+
+        String c= String.format("Ebob(%s,%s) = %s", a, b, ebob);
+        System.out.println(c);
+
+        System.out.println("\nEkokunun hesaplanmasını istediğininiz sayıları girin: ");
+        a=sc.nextInt();
+        b=sc.nextInt();
+
+        /*
+        //alternatif
+        //ekokun hesaplanması için önce sayıların ebobunun hesaplanması gerek
+        bolen=1;
+        while(bolen<=a){
+            if(a%bolen==0 && b%bolen==0)
+                ebob = bolen;
+
+            bolen++;
+        }
+        //ekok=a*b/ebob;
+
+         */
+
+        for(i=1; i<=a*b; i++){
+            if(i%a==0 && i%b==0) {
+                ekok=i;
+                break;
+            }
+        }
+
+        String d=String.format("Ekok(%s,%s) = %s", a,b,ekok);
+        System.out.println(d);
+
+    }
+    }
